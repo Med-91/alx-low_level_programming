@@ -17,10 +17,8 @@ int main(void)
 
 			for (m = 0; m < 10; m++)
 			{
-			if ((m >= j) && (k >= i))
+			if ((i * 10 + j) < (k * 10 + m))
 			{
-				if (!((i == k) && (j == m)))
-				{
 				putchar(i + '0');
 				putchar(j + '0');
 				putchar(' ');
@@ -30,7 +28,6 @@ int main(void)
 				{
 					putchar(',');
 					putchar(' ');
-				}
 				}
 			}
 			}
