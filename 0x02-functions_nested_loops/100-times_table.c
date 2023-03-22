@@ -28,7 +28,7 @@ if (n <= 15 || n >= 0)
 				_putchar(a / 10 + '0');
 				_putchar(a % 10 + '0');
 			}
-			if (j != 9)
+			if (j != n)
 			{
 			_putchar(',');
 			_putchar(' ');
