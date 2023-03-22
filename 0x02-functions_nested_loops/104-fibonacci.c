@@ -9,13 +9,13 @@ int main(void)
 	unsigned long num, a = 1, b = 2;
 
 	printf("1, 2, ");
-	for (i = 0; i < 96; i++)
+	for (i = 0; i < 98; i++)
 	{
 		num = a + b;
 		a = b;
 		b = num;
 		printf("%lu", num);
-		if (i != 95)
+		if (i != 97)
 			printf(", ");
 	}
 	printf("\n");
