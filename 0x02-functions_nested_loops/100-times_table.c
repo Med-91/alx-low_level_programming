@@ -2,7 +2,7 @@
 /**
  * print_times_table - fonction entry point
  * _putchar: prints character.
- * @n input integer
+ * @n: input integer
  */
 void print_times_table(int n)
 {
