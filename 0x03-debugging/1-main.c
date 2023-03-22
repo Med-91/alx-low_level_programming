@@ -11,7 +11,7 @@ int main(void)
 
 	printf("Infinite loop incoming :(\n");
 
-	i = 0;
+	i = 0;			/* this part is causing an infinite loop. */
 
 	while (i < 10)		/* this part is causing an infinite loop. */
 	{
