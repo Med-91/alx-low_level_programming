@@ -8,9 +8,9 @@
 int main(void)
 {
 	long int i = 2;
-	long int c = 1231952, large = 1;
+	long int c = 612852475143, large = 1;
 
-	while (i < c)
+	while (i <= c)
 	{
 		if (c % i == 0)
 		{
