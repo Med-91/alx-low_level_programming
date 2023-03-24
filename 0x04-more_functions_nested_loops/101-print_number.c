@@ -43,7 +43,7 @@ void print_positive(int a)
 	{
 		_putchar(a / 1000 + '0');
 		_putchar((a % 1000) / 100 + '0');
-		_putchar(((a % 100) / 10) / 10 + '0');
+		_putchar((a % 100) / 10 + '0');
 		_putchar(a % 10 + '0');
 	}
 }
