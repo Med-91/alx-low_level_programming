@@ -2,14 +2,10 @@
 
 /**
  * print_number - function that prints an integer.
- * print_positive - function that prits positive integer
+ * print_positive: function that prits positive integer
  * _putchar: prints character
  * @n: input integer
- * @a: input positive integer
  */
-
-void print_positive(int);
-
 void print_number(int n)
 {
 	if (n < 0)
@@ -19,6 +15,12 @@ void print_number(int n)
 	}
 	print_positive(n);
 }
+
+/**
+ * print_positive - function that prits positive integer
+ * _putchar: prints character
+ * @a: input positive integer
+ */
 
 void print_positive(int a)
 {
