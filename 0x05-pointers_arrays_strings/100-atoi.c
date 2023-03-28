@@ -15,21 +15,26 @@ int _atoi(char *s)
 	{
 		if (s[i] <= 57 && s[i] >= 48)
 		{
-			num = s[i] - '0';
-			val = val * 10 + num;
-			dig = 1;
+			if (sign % 2)
+			{
+				num = -(s[i] - '0');
+				val = val * 10 + num;
+			}
+			else
+			{
+				num = s[i] - '0';
+				val = val * 10 + num;
+			}
+				dig = 1;
+			if (s[i + 1] > 57 || s[i + 1] < 48)
+				break;
 		}
 		else if (dig == 0 && s[i] == '-')
 			sign++;
-		if (dig == 1 && (s[i] > 57 || s[i] < 48))
-			break;
 		i++;
 	}
 	if (s[i] == '\0' && dig == 0)
 		return (0);
-	if (sign % 2 == 0)
-		return (val);
-	else
-		return (-val);
+	return (val);
 }
 
