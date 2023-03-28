@@ -13,7 +13,7 @@ int _atoi(char *s)
 
 	while (s[i] != '\0')
 	{
-		if (s[i] < 57 &&s[i])
+		if (s[i] <= 57 && s[i] >= 48)
 		{
 			val = val * 10 + (-1 ^ sign) * s[i];
 			sign = 0;
@@ -22,10 +22,10 @@ int _atoi(char *s)
 		else if (s[i] == '-')
 			sign++;
 		i++;
-		if (dig == 1 && s[i] != [ : digit : ])
+		if (dig == 1 && s[i] > 57 && s[i] < 48)
 			return (val);
 	}
-	if (s[i] == '0' && dig == 0)
+	if (s[i] == '\0' && dig == 0)
 		return (0);
 }
 
