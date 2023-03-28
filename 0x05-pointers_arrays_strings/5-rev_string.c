@@ -10,7 +10,8 @@ int _strlen(char *st);
 void rev_string(char *s)
 {
 	int i;
-	char c, *p;
+	char c;
+	char *p;
 	int len = 0;
 
 	p = s;
@@ -19,10 +20,11 @@ void rev_string(char *s)
 		p++;
 		len++;
 	}
-	for (i = 0; i < len; i++)
+	for (i = 0; i < len / 2; i++)
 	{
-		c = *(s + i);
-		*(s + i) = *(s + len - 1 - i);
-		*(s + len - 1 - i) = c;
+		c = s[i];
+		s[i] = s[len - 1 - i];
+		s[len - 1 - i] = c;
 	}
 }
+
