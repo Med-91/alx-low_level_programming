@@ -21,9 +21,9 @@ int _atoi(char *s)
 		}
 		else if (s[i] == '-')
 			sign++;
-		i++;
 		if (dig == 1 && s[i] > 57 && s[i] < 48)
-			return (val);
+			break;
+		i++;
 	}
 	if (s[i] == '\0' && dig == 0)
 		val = 0;
