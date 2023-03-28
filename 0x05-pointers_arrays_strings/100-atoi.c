@@ -26,6 +26,7 @@ int _atoi(char *s)
 			return (val);
 	}
 	if (s[i] == '\0' && dig == 0)
-		return (0);
-}
+		val = 0;
 
+	return (val);
+}
