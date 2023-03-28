@@ -12,13 +12,13 @@ int main(void)
 	int n = 0, cum = 0;
 
 	srand(time(0));
-	while (cum < 2772)
+	while (cum + '0'< 2772)
 	{
 		n = rand() % 91;
 		cum += n + '0';
 		printf("%c", n + '0');
 	}
 	n = 2772 - (cum - n);
-	printf("%c", n);
+	printf("%c", n + '0');
 	return (0);
 }
