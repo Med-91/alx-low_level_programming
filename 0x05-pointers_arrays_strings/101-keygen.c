@@ -15,12 +15,12 @@ int main(void)
 	while (cum < 2772)
 	{
 		n = rand() % 128;
-		cum += n + '0';
-		if (cum >= 2772)
+		cum += n;
+		if (cum > 2772)
 			break;
-		printf("%c", n + '0');
+		printf("%c", n);
 	}
-	n = 2772 - (cum - n - '0');
+	n = 2772 - (cum - n);
 	printf("%c\n", n);
 	return (0);
 }
