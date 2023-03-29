@@ -14,7 +14,7 @@ int main(void)
 	srand(time(NULL));
 	while (cum + '0' < 2772)
 	{
-		n = rand() % 91;
+		n = rand() % 128;
 		cum += n + '0';
 		printf("%c", n + '0');
 	}
