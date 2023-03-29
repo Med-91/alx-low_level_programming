@@ -10,9 +10,8 @@
 int main(void)
 {
 	int n = 0, cum = 0;
-	time_t t;
 
-	srand(time(&t));
+	srand(time(NULL));
 	while (cum + '0' < 2772)
 	{
 		n = rand() % 91;
@@ -21,5 +20,6 @@ int main(void)
 	}
 	n = 2772 - (cum - n);
 	printf("%c", n + '0');
+	printf(" \\0");
 	return (0);
 }
