@@ -20,6 +20,5 @@ int main(void)
 	}
 	n = 2772 - (cum - n - '0');
 	printf("%c", n);
-	printf(" \\0");
 	return (0);
 }
