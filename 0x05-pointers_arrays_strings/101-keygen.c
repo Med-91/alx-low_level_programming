@@ -10,9 +10,10 @@
 int main(void)
 {
 	int n = 0, cum = 0;
+	time_t t;
 
-	srand(time(0));
-	while (cum + '0'< 2772)
+	srand(time(&t));
+	while (cum + '0' < 2772)
 	{
 		n = rand() % 91;
 		cum += n + '0';
