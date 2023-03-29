@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * _strcmp - function that compares two strings.
+ * reverse_array - function that reverse an array of integer
  * @a: input array of integer
  * @n: input integer
  */
