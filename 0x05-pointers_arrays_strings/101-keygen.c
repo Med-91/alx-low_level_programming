@@ -19,6 +19,6 @@ int main(void)
 		printf("%c", n + '0');
 	}
 	n = 2772 - (cum - n - '0');
-	printf("%c", n);
+	printf("%c\n", n);
 	return (0);
 }
