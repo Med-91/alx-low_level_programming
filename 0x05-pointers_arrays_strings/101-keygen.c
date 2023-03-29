@@ -16,6 +16,8 @@ int main(void)
 	{
 		n = rand() % 128;
 		cum += n + '0';
+		if (cum >= 2772)
+			break;
 		printf("%c", n + '0');
 	}
 	n = 2772 - (cum - n - '0');
