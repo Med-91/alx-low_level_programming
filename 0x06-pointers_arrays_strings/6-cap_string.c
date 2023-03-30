@@ -29,7 +29,10 @@ char *cap_string(char *str)
 	{
 		for (j = 0; *(tab + j) != '\0'; j++)
 			if (*(str + i - 1) == *(tab + j))
+			{
 				*(str + i) = low_to_up(*(str + i));
+				break;
+			}
 	}
 	return (str);
 }
