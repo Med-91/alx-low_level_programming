@@ -17,12 +17,14 @@ void print_buffer(char *b, int size)
 		while (i < size)
 		{
 			printf("%08x: ", i);
-			for (k = 0; k < 10; k += 2)
+			for (k = 0; k < 10; k++)
 			{
-				if (i + k < size - 1)
-				printf("%02x%02x ", b[i + k], b[i + k + 1]);
+				if (i + k < size)
+					printf("%02x", b[i + k]);
 				else
-					printf("     ");
+					printf("  ");
+				if ((i + k) % 2)
+					printf(" ");
 			}
 			for (j = 0; j < 10; j++)
 			{
