@@ -12,7 +12,7 @@ char *_strstr(char *haystack, char *needle)
 
 	i = j = boul = 0;
 	if (!needle[0] || !haystack[0])
-		return (NULL);
+		return (0);
 	while (haystack[i])
 	{
 		if (needle[j] == haystack[i])
