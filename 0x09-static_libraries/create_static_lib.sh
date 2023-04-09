@@ -3,4 +3,6 @@ for file in ./*.c
 do
 	gcc -c ${file}
 done
+ar rc liball.a *.o
+ranlib liball.a
 
