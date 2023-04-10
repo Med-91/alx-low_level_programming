@@ -25,7 +25,7 @@ int _atoi(char *s)
 				num = s[i] - '0';
 				val = val * 10 + num;
 			}
-				dig = 1;
+			dig = 1;
 			if (s[i + 1] > 57 || s[i + 1] < 48)
 				break;
 		}
