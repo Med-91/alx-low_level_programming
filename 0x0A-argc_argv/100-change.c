@@ -13,7 +13,7 @@ int main(int argc, char **argv)
 {
 	int i = 0, cun = 0, cent;
 	int tab[5] = {25, 10, 5, 2, 1};
-		
+
 	cent = _atoi(argv[1]);
 	if (argc != 2)
 	{
@@ -35,10 +35,10 @@ int main(int argc, char **argv)
 				printf("%d\n", cun);
 				return (0);
 			}
-			cent = cent % tab[i] ;
+			cent = cent % tab[i];
 		}
 		i++;
-	}			
+	}
 	return (0);
 }
 
