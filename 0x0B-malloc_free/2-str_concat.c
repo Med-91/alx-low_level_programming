@@ -32,7 +32,7 @@ char *str_concat(char *s1, char *s2)
 		else if (s2)
 			p[i] = s2[i - c1];
 		else
-			p[i] = '\n';
+			p[i] = '\0';
 	}
 	return (p);
 }
