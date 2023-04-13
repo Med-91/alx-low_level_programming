@@ -21,6 +21,8 @@ char **strtow(char *str)
 	if (str[0] == '\0')
 		return (NULL);
 	c = count_w(str);
+	if (c[0] == 0)
+		return (NULL);
 	p = malloc((c[0] + 1) * sizeof(char *));
 	if (p == NULL)
 		return (p);
