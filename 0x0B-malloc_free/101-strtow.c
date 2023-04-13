@@ -89,11 +89,11 @@ int *count_w(char *s)
 		if (s[i] != ' ')
 			b++;
 		else if (b)
-			{
-				tab[j + 1] = b;
-				j++;
-				b = 0;
-			}
+		{
+			tab[j + 1] = b;
+			j++;
+			b = 0;
+		}
 	}
 	tab[0] = coun;
 	return (tab);
