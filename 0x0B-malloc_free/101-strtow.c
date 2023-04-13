@@ -1,5 +1,4 @@
 #include <stdlib.h>
-#include <string.h>
 #include "main.h"
 
 int *count_w(char *s);
@@ -80,18 +79,21 @@ int *count_w(char *s)
 				coun++;
 				boul = 1;
 			}
-			b++;
 		}
-		else
-		{
+		else if (boul)
 			boul = 0;
-			if (b)
+	}
+	tab = (int *)malloc((coun + 1) * sizeof(int));
+	for (i = 0; s[i] != '\0'; i++)
+	{
+		if (s[i] != ' ')
+			b++;
+		else if (b)
 			{
-				*(tab + j + 1) = b;
+				tab[j + 1] = b;
 				j++;
 				b = 0;
 			}
-		}
 	}
 	tab[0] = coun;
 	return (tab);
