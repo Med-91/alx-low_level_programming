@@ -7,6 +7,7 @@
  * @old_size: old size of the memory
  * @new_size: new size of the memory
  * Return: pointer to the tne new memory
+ *	NULL if it fails
  */
 
 void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
