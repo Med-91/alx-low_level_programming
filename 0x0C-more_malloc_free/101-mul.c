@@ -32,8 +32,10 @@ int  main(int ac, char *av[])
 		if (p[i] != '0')
 		{
 			printf("%s\n", &(p[i]));
+			free(p);
 			return (0);
-		}
+		}	
+	free(p);
 	printf("0\n");
 	return (0);
 }
@@ -76,6 +78,7 @@ char *str_mul(char *s1, char *s2)
 		p1[0] = c + '0';
 		sum = infinite_add(p1, sum, sum, n1 + n2);
 	}
+	free(p1);
 	return (sum);
 }
 
