@@ -1,6 +1,6 @@
 #include "main.h"
 #include <stdlib.h>
-
+#include <stdio.h>
 /**
  * main - multiplies two positive numbers.
  * _puts - function that prints a string, followed by a new line
@@ -12,7 +12,7 @@
 int  main(int ac, char *av[])
 
 {
-	int c1, c2;
+	int c1, i, c2;
 	char *p;
 
 	if (ac != 3)
@@ -28,9 +28,13 @@ int  main(int ac, char *av[])
 		exit(98);
 	}
 	p = str_mul(av[1], av[2]);
-	if (p[0] == '0')
-		p++;
-	_puts(p);
+	for (i = 0; p[i] != '\0'; i++)
+		if (p[i] != '0')
+		{
+			printf("%s\n", &(p[i]));
+			return (0);
+		}
+	printf("0\n");
 	return (0);
 }
 
