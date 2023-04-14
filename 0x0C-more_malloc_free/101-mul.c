@@ -28,6 +28,8 @@ int  main(int ac, char *av[])
 		exit(98);
 	}
 	p = str_mul(av[1], av[2]);
+	if (p[0] == '0')
+		p++;
 	_puts(p);
 	return (0);
 }
@@ -68,12 +70,7 @@ char *str_mul(char *s1, char *s2)
 			c = (num2 * num1 + c) / 10;
 		}
 		p1[0] = c + '0';
-		sum = infinite_add(p1, sum, sum, n1 + n2 + 1);
-	}
-	if (p1[0] == '0')
-	{
-		for (i = 0; i < n1 + n2; i++)
-			p1[i] = p1[i + 1];
+		sum = infinite_add(p1, sum, sum, n1 + n2);
 	}
 	return (sum);
 }
@@ -132,7 +129,7 @@ int _strlen(char *str)
 }
 
 /**
- * infinite_add - function that adds two numbers.
+ * infinite_add - function that adds two numbers of the same size of byte.
  * @n1: pointer to the first sitring
  * @n2: pointer to the second string
  * @r: pointer to the result string
@@ -146,26 +143,13 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 
 	l1 = _strlen(n1);
 	l2 = _strlen(n2);
-	r[size_r - 1] = '\0';
-	if (l1 > size_r || l2 > size_r)
-		return (NULL);
-	for (i = 0; i < size_r - 1; i++)
+	for (i = 0; i < size_r; i++)
 	{
-		if (l1 - 1 - i >= 0)
-			num1 = n1[l1 - 1 - i] - '0';
-		else
-			num1 = 0;
-		if (l2 - 1 - i >= 0)
-			num2 = n2[l2 - 1 - i] - '0';
-		else
-			num2 = 0;
-		if (!num1 && !num2 && !c)
-			return (&(r[size_r - 2 - i + 1]));
-		r[size_r - 2 - i] = (num1 + num2 + c) % 10 + '0';
+		num1 = n1[l1 - 1 - i] - '0';
+		num2 = n2[l2 - 1 - i] - '0';
+		r[size_r - 1 - i] = (num1 + num2 + c) % 10 + '0';
 		c = (num1 + num2 + c) / 10;
 	}
-	if (c != 0)
-		return (NULL);
 	return (r);
 }
 /**
