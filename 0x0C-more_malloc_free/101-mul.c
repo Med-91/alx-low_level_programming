@@ -34,7 +34,7 @@ int  main(int ac, char *av[])
 			printf("%s\n", &(p[i]));
 			free(p);
 			return (0);
-		}	
+		}
 	free(p);
 	printf("0\n");
 	return (0);
