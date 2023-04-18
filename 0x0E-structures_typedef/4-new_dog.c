@@ -25,7 +25,12 @@ dog_t *new_dog(char *name, float age, char *owner)
 	str1 = malloc((s1 + 1) * sizeof(char));
 	str2 = malloc((s2 + 1) * sizeof(char));
 	if (str1 == NULL || str2 == NULL)
+	{
+		free(str1);
+		free(str2);
+		free(d);
 		return (NULL);
+	}
 	for (i = 0; name[i] != '\0'; i++)
 		str1[i] = name[i];
 	str1[i] = '\0';
