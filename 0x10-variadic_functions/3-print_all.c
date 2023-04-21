@@ -19,9 +19,9 @@ void print_all(const char * const format, ...)
 	int i, a;
 
 	i = a = 0;
-	va_start(ap, format);
 	if (!format)
 		return;
+	va_start(ap, format);
 	while (format[i] != '\0')
 	{
 		f1 = format[i];
