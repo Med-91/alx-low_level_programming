@@ -15,11 +15,13 @@
 void print_all(const char * const format, ...)
 {
 	va_list ap;
-	char f1,*str1, *str2 = "";
+	char f1, *str1, *str2 = "";
 	int i, a;
 
 	i = a = 0;
 	va_start(ap, format);
+	if (!format)
+		return;
 	while (format[i] != '\0')
 	{
 		f1 = format[i];
