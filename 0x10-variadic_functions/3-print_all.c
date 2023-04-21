@@ -15,17 +15,15 @@
 void print_all(const char * const format, ...)
 {
 	va_list ap;
-	char f1, *str1, *str2 = "";
-	int i, a;
+	char *str1, *str2 = "";
+	int i = 0, a = 0;
 
-	i = a = 0;
 	if (!format)
 		return;
 	va_start(ap, format);
 	while (format[i] != '\0')
 	{
-		f1 = format[i];
-		switch (f1)
+		switch (format[i])
 		{
 			case 's':
 				str1 = va_arg(ap, char *);
@@ -47,11 +45,10 @@ void print_all(const char * const format, ...)
 				a = 1;
 				break;
 		}
-		switch(a)
+		switch (a)
 		{
 			case 1:
 				str2 = ", ";
-				break;
 		}
 		i++;
 	}
