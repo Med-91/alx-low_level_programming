@@ -19,7 +19,7 @@ void print_all(const char * const format, ...)
 	int i = 0, a = 0;
 
 	if (!format)
-		return;
+		exit(0);
 	va_start(ap, format);
 	while (format[i] != '\0')
 	{
