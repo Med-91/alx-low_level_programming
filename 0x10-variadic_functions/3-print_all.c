@@ -47,8 +47,12 @@ void print_all(const char * const format, ...)
 				a = 1;
 				break;
 		}
-		if (a)
-			str2 = ", ";
+		switch(a)
+		{
+			case 1:
+				str2 = ", ";
+				break;
+		}
 		i++;
 	}
 	printf("\n");
