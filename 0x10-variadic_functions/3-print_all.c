@@ -18,41 +18,41 @@ void print_all(const char * const format, ...)
 	char *str1, *str2 = "";
 	int i = 0, a = 0;
 
-	if (!format)
-		exit(0);
-	va_start(ap, format);
-	while (format[i] != '\0')
+	if (format)
 	{
-		switch (format[i])
+		va_start(ap, format);
+		while (format[i] != '\0')
 		{
-			case 's':
-				str1 = va_arg(ap, char *);
-				if (str1 == NULL)
-					str1 = "(nil)";
-				printf("%s%s", str2, str1);
-				a = 1;
-				break;
-			case 'i':
-				printf("%s%d", str2, va_arg(ap, int));
-				a = 1;
-				break;
-			case 'c':
-				printf("%s%c", str2, va_arg(ap, int));
-				a = 1;
-				break;
-			case 'f':
-				printf("%s%f", str2, va_arg(ap, double));
-				a = 1;
-				break;
+			switch (format[i])
+			{
+				case 's':
+					str1 = va_arg(ap, char *);
+					if (str1 == NULL)
+						str1 = "(nil)";
+					printf("%s%s", str2, str1);
+					a = 1;
+					break;
+				case 'i':
+					printf("%s%d", str2, va_arg(ap, int));
+					a = 1;
+					break;
+				case 'c':
+					printf("%s%c", str2, va_arg(ap, int));
+					a = 1;
+					break;
+				case 'f':
+					printf("%s%f", str2, va_arg(ap, double));
+					a = 1;
+			}
+			switch (a)
+			{
+				case 1:
+					str2 = ", ";
+			}
+			i++;
 		}
-		switch (a)
-		{
-			case 1:
-				str2 = ", ";
-		}
-		i++;
+		va_end(ap);
 	}
 	printf("\n");
-	va_end(ap);
 }
 
